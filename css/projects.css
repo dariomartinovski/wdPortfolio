@@ -1,0 +1,133 @@
+html{
+    scroll-behavior: smooth;
+    --dark-color : #20232E;
+    --accent-color : #9198b3;
+    --blue-color : #456dff;
+    --dark-blue : #28419b;
+    --normal-text: 1.125em;
+    --title-size : 1.875em;
+    --background-text : 16.25em;
+    background-color: rgb(245, 245, 245);
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+p{
+    line-height: 1.5;
+}
+h2{
+    font-size: 22px;
+}
+/* nav starts here */
+nav{
+    z-index: 1;
+    top:0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    border-bottom: 2px solid #456dff;
+}
+nav img{
+    margin: 0.5em 0 0.5em 5em ;
+    height: 3em;
+}
+nav>ul{
+    margin-right: 5em;
+    display: flex;
+    list-style: none;
+}
+nav li a{
+    text-decoration: none;
+    padding: 1em 2em;
+    color: var(--dark-color);
+}
+nav li a:hover{
+    color: var(--accent-color);
+}
+/* nav ends here */
+
+main{
+    padding: 5em 0 3em;
+    display: grid;
+    grid-template-columns: 30% 30%;
+    justify-content: center;
+    gap: 2em;
+}
+main h1{
+    font-size: 35px;
+    grid-column: 1/3;
+    margin-bottom: 0.5em;
+    font-family: 'Times New Roman', Times, serif;
+}
+main img{
+    width: 100%;
+    height: 100%;
+}
+.img1{
+    grid-row: 2/4;
+}
+main .comingsoon{
+    grid-column: 1/3;
+}
+main .comingsoon h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+main button{
+    color: var(--dark-color);
+    background-color: transparent;
+    border: 1px solid var(--dark-color);
+    padding: 0.8em 1.6em;
+    margin-right: 1em;
+    transition: all 150ms ease-in;
+}
+main button:hover{
+    background-color: var(--dark-color);
+    color: white;
+}
+/* footer starts here */
+footer{
+    font-weight: normal;
+    color: rgb(80, 80, 80);
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer>div:first-child{
+    margin-left: 5em;
+}
+footer>div:first-child>p:first-child{
+    margin-bottom: 0;
+    font-size: 0.8em;
+}
+footer>div:first-child>p:last-child{
+    margin-top: 0.5em;
+}
+footer img{
+    height: 2.5em;
+    margin-left: 1.5em;
+    /* margin: 1em 0 1em 1em; */
+}
+footer>div:nth-child(2)>a:last-child{
+    margin-right: 5em;
+}
+/* footer ends here */
+
+@media only screen and (min-width:2050px) {
+    nav,footer{
+        margin: 0 auto;
+        width: 2050px;
+    }
+    body{
+        margin: 0 auto;
+        width: 2050px;
+    }
+}

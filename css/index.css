@@ -1,0 +1,586 @@
+
+.cursor{
+    width: 1.25em;
+    height: 1.25em;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+}
+
+html{
+    scroll-behavior: smooth;
+    --dark-color : #20232E;
+    --accent-color : #9198b3;
+    --blue-color : #456dff;
+    --dark-blue : #28419b;
+    --normal-text: 1.125em;
+    --title-size : 1.875em;
+    --background-text : 16.25em;
+    background-color: var(--dark-color);
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+p{
+    line-height: 1.5;
+}
+/* nav bar starts here */
+nav{
+    z-index: 1;
+    top:0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    border-bottom: 2px solid #456dff;
+}
+nav img{
+    margin: 0.5em 0 0.5em 5em ;
+    height: 3em;
+}
+nav>ul{
+    margin-right: 5em;
+    display: flex;
+    list-style: none;
+}
+nav li a{
+    text-decoration: none;
+    padding: 1em 2em;
+    color: var(--dark-color);
+}
+nav li a:hover{
+    color: var(--accent-color);
+}
+/* nav bar edns here */
+
+/* section1 starts here */
+#section1{
+    padding-top: 13em;
+    background-color: var(--dark-color);
+    color: white;
+    /* height: 80vh; */
+    position: relative;
+    isolation: isolate;
+    padding-bottom: 15em;
+}
+#section1 div{
+    margin-left: 4.5em;
+    max-width: 34.375em;
+    text-align: center;
+}
+#section1 h3{
+    font-size: var(--title-size);
+    margin-bottom: 0;
+}
+#section1 span{
+    color: var(--blue-color);
+}
+#section1 h1{
+    margin: 0 0 0.6em;
+    font-size: 4.375em;
+    line-height: 1;
+}
+#section1 button{
+    z-index: 1;
+    background-color: rgb(200, 200, 200);
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5em;
+    font-size: var(--normal-text);
+    padding: 0.8em 2em;
+    transition: all 100ms ease-in;
+}
+#section1 button:hover{
+    color: var(--accent-color);
+}
+#section1::before{
+    text-align: right;
+    color: white;
+    content: 'FRONT END DEVELOPER';
+    position: absolute;
+    top: 0.5em;
+    right: 0.1em;
+    font-weight: bold;
+    font-size: var(--background-text);
+    z-index: -1;
+    letter-spacing: -15px;
+    opacity: 0.03;
+    line-height: 0.85;
+}
+@media only screen and (min-width: 1700px){
+    #section1::before{
+        right: 0.7em;
+    }
+}
+@media only screen and (min-width: 1800px){
+    #section1::before{
+        right: 1.5em;
+    }
+}
+@media only screen and (min-width:2050px) {
+    nav{
+        margin: 0 auto;
+        width: 2050px;
+    }
+    body{
+        margin: 0 auto;
+        width: 2050px;
+    }
+    #section1::before{
+        right: 2em;
+    }
+}
+.c1{
+    width: 1.25em;
+    height: 1.25em;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    z-index: -1;
+}
+
+
+/* section1 ends here */
+
+/* section2 starts here */
+#section2{
+    padding-top: 3em;
+    background-color: white;
+    position: relative;
+    isolation: isolate;
+    padding-bottom: 5em;
+}
+#section2 h1{
+    font-size: var(--title-size);
+    font-weight: bold;
+    text-align: center;
+}
+#section2 .toppart{
+    margin: 2em 5em;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+#section2 .toppart .icons{
+    margin: 0 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#section2 .toppart .img{
+    height: 6.56em;
+    width: 7.5em;
+    display: grid;
+    place-items: center;
+}
+#section2 .toppart img{
+    height: 4em;
+}
+#section2 .icons:nth-child(odd) .img{
+    background-image: url(../images/blue-polygon.svg);
+}
+#section2 .icons:nth-child(even) .img{
+    background-image: url(../images/dark-polygon.svg);
+}
+#section2 .icons h2{
+    margin-bottom: 0.5em;
+}
+#section2 .toppart p{
+    margin-top: 0;
+    width: 30ch;
+}
+
+#section2 .bottompart{
+    margin: 0 5em;
+    display: flex;
+    justify-content: center;
+}
+#section2 .bottompart div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5em;
+}
+#section2 .bottompart img{
+    overflow: hidden;
+    height: 15em;
+}
+#section2 .bottompart p span{
+    color: var(--blue-color);
+}
+#section2 .bottompart div:nth-child(1) h2{
+    margin-bottom: 0;
+}
+#section2 .bottompart div:nth-child(1) p{
+    width: 50ch;
+}
+#section2 .bottompart div:nth-child(2) h2{
+    margin-top: 0;
+}
+#section2 .bottompart div:nth-child(2) p{
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-blue);
+    height: 2em;
+    width: 7em;
+}
+#section2 .progress-bar{
+    background-color:rgb(240, 240, 240);
+    width: 40em;
+    position: relative;
+    isolation: isolate;
+}
+#section2 .progress-bar:after{
+    content: '';
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 3em;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+}
+#section2 .filled{
+    position: absolute;
+    height: 100%;
+    background-color: var(--blue-color);
+    z-index: -1;
+}
+#section2 .progress-bar:nth-child(2) .filled{
+    width: 80%;
+}
+#section2 .progress-bar:nth-child(2)::after{
+    content: '80%';
+}
+#section2 .progress-bar:nth-child(3) .filled{
+    width: 80%;
+}
+#section2 .progress-bar:nth-child(3)::after{
+    content: '80%';
+}
+#section2 .progress-bar:nth-child(4) .filled{
+    width: 50%;
+}
+#section2 .progress-bar:nth-child(4)::after{
+    content: '50%';
+}
+#section2 .progress-bar:nth-child(5) .filled{
+    width: 90%;
+}
+#section2 .progress-bar:nth-child(5)::after{
+    content: '90%';
+}
+#section2 .progress-bar:nth-child(6) .filled{
+    width: 80%;
+}
+#section2 .progress-bar:nth-child(6)::after{
+    content: '80%';
+}
+#section2::before{
+    content: 'ABOUT';
+    color: var(--dark-color);
+    position: absolute;
+    top: 0.35em;
+    left: -0.4em;
+    font-weight: bold;
+    font-size: var(--background-text);
+    z-index: -1;
+    letter-spacing: -15px;
+    opacity: 0.1;
+    line-height: 0.85;
+}
+#section2::after{
+    content: 'ABOUT';
+    color: var(--dark-color);
+    position: absolute;
+    top: 2.26em;
+    right: -2.92em;
+    font-size: var(--background-text);
+    font-weight: bold;
+    z-index: -1;
+    letter-spacing: -15px;
+    opacity: 0.1;
+    line-height: 0.85;
+}
+@media only screen and (max-width: 65em){
+    #section2 .toppart{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #section2 .bottompart{
+        flex-direction: column;
+        align-items: center;
+    }
+    #section2 .bottompart div:nth-child(1){
+        margin-right: 0;
+    }
+}
+/* section2 ends here */
+
+/* section3 starts here */
+#section3{
+    position: relative;
+    isolation: isolate;
+    padding-top: 3em;
+    padding-bottom: 5em;
+    background-color: rgb(240, 240, 240);
+    text-align: center;
+    /* height: 100vh; */
+}
+#section3 h1{
+    font-size: var(--title-size);
+    font-weight: bold;
+    text-align: center;
+}
+#section3 h3{
+    margin-top: 0;
+}
+#section3 p{
+    margin: 0;
+}
+#section3 .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+}
+#section3 .textarea{
+    height: 14.375em;
+    width: 37.5em;
+    background-color: var(--dark-color);
+    z-index: 2;
+    text-align: left;
+    padding: 2em;
+    box-sizing: border-box;
+    color: white;
+}
+#section3 .container:nth-child(2) .textarea{
+    margin-right: -5em;
+}
+#section3 .container:nth-child(3) .textarea{
+    margin-left: -5em;
+}
+#section3 .tags{
+    display: flex;
+}
+#section3 .tag{
+    padding: 0.2em 1em;
+    background-color: rgb(200, 200, 200);
+    color: black;
+    font-weight: bold;
+    border-radius: 0.7em;
+    margin: 1em;
+}
+#section3 .tag:nth-child(1){
+    margin-left: 0;
+}
+#section3 .imgarea{
+    height: 18.75em;
+    width: 37.5em;
+    background-color: var(--blue-color);
+    z-index: 1;
+    background-size: cover;
+}
+#section3 .container:nth-child(2) .imgarea{
+    background-image: url(../images/mockup1.jpg);
+}
+#section3 .container:nth-child(3) .imgarea{
+    background-image: url(../images/mockup2.jpg);
+}
+#section3 button{
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5em;
+    font-size: var(--normal-text);
+    padding: 0.8em 2em;
+    transition: all 100ms ease-in;
+    background-color: rgb(200, 200, 200);
+}
+#section3 button:hover{
+    color: var(--accent-color);
+}
+#section3::before{
+    content: 'PROJECTS';
+    color: var(--dark-color);
+    position: absolute;
+    top: 1.05em;
+    left: -1em;
+    font-weight: bold;
+    font-size: var(--background-text);
+    z-index: -1;
+    letter-spacing: -15px;
+    opacity: 0.1;
+    line-height: 0.85;
+}
+#section3::after{
+    content: 'PROJECTS';
+    color: var(--dark-color);
+    position: absolute;
+    top: 2.3em;
+    right: -4em;
+    font-weight: bold;
+    font-size: var(--background-text);
+    z-index: -1;
+    letter-spacing: -15px;
+    opacity: 0.1;
+    line-height: 0.85;
+}
+/* section3 ends here */
+
+/* section4 starts here */
+#section4{
+    position: relative;
+    isolation: isolate;
+    padding-top: 3em;
+    padding-bottom: 6em;
+    background-color: var(--dark-color);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: white;
+}
+#section4 h1{
+    grid-column:1/3 ;
+    color: white;
+    font-size: var(--title-size);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3em;
+}
+#section4 form{
+    margin-left: 5em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+#section4 label{
+    display: block;
+    margin-bottom: 0.2em;
+}
+#section4 input{
+    border-radius: 0.5em;
+    height: 2em;
+    width: 30em;
+    margin-bottom: 1.5em;
+}
+#section4 textarea{
+    border-radius: 0.5em;
+    resize: none;
+    width: 30em;
+    height: 12em;
+}
+#section4 form button{
+    font-size: 15px;
+    margin-top: 1em;
+    border: none;
+    border-radius: 0.5em;
+    height: 2.2em;
+    width: 8em;
+}
+#section4>div h3{
+    margin-top: 0;
+}
+#section4>div p{
+    width: 45ch;
+}
+#section4 .tag{
+    display: flex;
+    align-items: center;
+}
+#section4 .tag::before{
+    content: '';
+    width: 2em;
+    height: 2em;
+    display: inline-block;
+    margin-right: 1em;
+}
+#section4 .tag:nth-child(3)::before{
+    background-image: url(../images/location.svg);
+}
+#section4 .tag:nth-child(4)::before{
+    background-image: url(../images/phone.svg);
+}
+#section4 .tag:nth-child(5)::before{
+    background-image: url(../images/email.svg);
+}
+#section4::before{
+    content: 'CONTACT';
+    color: white;
+    position: absolute;
+    top: 0.5em;
+    left: -0.5em;
+    font-weight: bold;
+    font-size: var(--background-text);
+    z-index: -1;
+    letter-spacing: -15px;
+    opacity: 0.03;
+    line-height: 0.85;
+}
+#section4::after{
+    content: 'CONTACT';
+    color: white;
+    position: absolute;
+    top: 1.5em;
+    right: -4em;
+    font-weight: bold;
+    font-size: var(--background-text);
+    z-index: -1;
+    letter-spacing: -15px;
+    opacity: 0.03;
+    line-height: 0.85;
+}
+@media only screen and (max-width: 65em){
+    #section4 form{
+        grid-column: 1/3;
+        justify-self: center;
+    }
+    #section4>div{
+        justify-self: center;
+        grid-column: 1/3;
+        margin-left: 5em;
+        margin-top: 3em;
+    }
+}
+/* section4 ends here */
+/* footer starts here */
+footer{
+    font-weight: normal;
+    color: rgb(80, 80, 80);
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer>div:first-child{
+    margin-left: 5em;
+}
+footer>div:first-child>p:first-child{
+    margin-bottom: 0;
+    font-size: 0.8em;
+}
+footer>div:first-child>p:last-child{
+    margin-top: 0.5em;
+}
+footer img{
+    height: 2.5em;
+    margin-left: 1.5em;
+    /* margin: 1em 0 1em 1em; */
+}
+footer>div:nth-child(2)>a:last-child{
+    margin-right: 5em;
+}
+/* footer ends here */
