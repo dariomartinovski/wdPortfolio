@@ -42,6 +42,7 @@ nav{
     align-items: center;
     font-weight: bold;
     border-bottom: 2px solid #456dff;
+    width: 100%;
 }
 nav img{
     margin: 0.5em 0 0.5em 5em ;
@@ -64,6 +65,8 @@ nav li a:hover{
 
 /* section1 starts here */
 #section1{
+    width: 100%;
+    overflow: hidden;
     padding-top: 13em;
     background-color: var(--dark-color);
     color: white;
@@ -71,6 +74,7 @@ nav li a:hover{
     position: relative;
     isolation: isolate;
     padding-bottom: 15em;
+    /* width: 100%; */
 }
 #section1 div{
     margin-left: 4.5em;
@@ -116,6 +120,14 @@ nav li a:hover{
     opacity: 0.03;
     line-height: 0.85;
 }
+@media only screen and (max-width: 850px){
+    .c1{
+        display: none;
+    }
+    #section1 div{
+        margin: 0 auto;
+    }
+}
 @media only screen and (min-width: 1700px){
     #section1::before{
         right: 0.7em;
@@ -155,6 +167,8 @@ nav li a:hover{
 
 /* section2 starts here */
 #section2{
+    width: 100%;
+    overflow: hidden;
     padding-top: 3em;
     background-color: white;
     position: relative;
@@ -334,6 +348,8 @@ nav li a:hover{
 
 /* section3 starts here */
 #section3{
+    width: 100%;
+    overflow: hidden;
     position: relative;
     isolation: isolate;
     padding-top: 3em;
@@ -360,7 +376,7 @@ nav li a:hover{
     margin-bottom: 2em;
 }
 #section3 .textarea{
-    height: 14.375em;
+    min-height: 14.375em;
     width: 37.5em;
     background-color: var(--dark-color);
     z-index: 2;
@@ -390,7 +406,7 @@ nav li a:hover{
     margin-left: 0;
 }
 #section3 .imgarea{
-    height: 18.75em;
+    min-height: 18.75em;
     width: 37.5em;
     background-color: var(--blue-color);
     z-index: 1;
@@ -440,10 +456,30 @@ nav li a:hover{
     opacity: 0.1;
     line-height: 0.85;
 }
+@media only screen and (max-width: 850px){
+    #section3 .container{
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        /* code here */
+    }
+    #section3 .container:nth-child(2) .textarea{
+        grid-row: 2/3;
+        margin-right: 0em;
+        margin-bottom: 3em;
+    }
+    #section3 .container:nth-child(3) .textarea{
+        margin-left: 0em;
+        margin-bottom: 3em;
+    }
+}
 /* section3 ends here */
 
 /* section4 starts here */
 #section4{
+    width: 100%;
+    overflow: hidden;
     position: relative;
     isolation: isolate;
     padding-top: 3em;
@@ -543,6 +579,11 @@ nav li a:hover{
     opacity: 0.03;
     line-height: 0.85;
 }
+@media only screen and (max-width: 850px){
+    #section4 h1{
+        margin-bottom: 1em;
+    }
+}
 @media only screen and (max-width: 65em){
     #section4 form{
         grid-column: 1/3;
@@ -558,6 +599,7 @@ nav li a:hover{
 /* section4 ends here */
 /* footer starts here */
 footer{
+    width: 100%;
     font-weight: normal;
     color: rgb(80, 80, 80);
     background-color: rgb(240, 240, 240);
